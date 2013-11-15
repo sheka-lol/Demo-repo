@@ -16,8 +16,8 @@ public class DefaultState implements PawnState {
                         sign = 1;
                 else if (figure.getChessType() == ChessType.BLACK)
                         sign = -1;
-                if (sign * plate.getY() > sign * currPlate.getY())
-                        return false;
+                if (sign * plate.getY() < sign * currPlate.getY())
+                        return true;
                 if (!plate.isEmpty()
                                 && Math.abs((plate.getX() - currPlate.getX())) == 50
                                 && sign * (currPlate.getY() - plate.getY()) == 50) {
