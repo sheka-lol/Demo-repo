@@ -8,23 +8,7 @@ public class DefaultState implements PawnState {
 
         @Override
         public boolean isValide(Plate plate, Plate currPlate) {
-                if (!plate.isEmpty()
-                                && plate.getFigure().getChessType() == currPlate.getFigure()
-                                                .getChessType())
-                        return false;
-                if (figure.getChessType() == ChessType.WHITE)
-                        sign = 1;
-                else if (figure.getChessType() == ChessType.BLACK)
-                        sign = -1;
-                if (sign * plate.getY() < sign * currPlate.getY())
-                        return true;
-                if (!plate.isEmpty()
-                                && Math.abs((plate.getX() - currPlate.getX())) == 50
-                                && sign * (currPlate.getY() - plate.getY()) == 50) {
-                        if (figure.isTouched())
-                                figure.setState(figure.getMainState());
-                        return true;
-                }
+                
                 if (plate.getX() != currPlate.getX())
                         return false;
                 if (sign * (currPlate.getY() - plate.getY()) > 100)
