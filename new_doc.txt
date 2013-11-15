@@ -1,2 +1,2 @@
-first doc
+first commit
 new doc
