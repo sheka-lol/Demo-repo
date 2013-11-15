@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 second doc
-=======
-new doc
->>>>>>> new_branche
